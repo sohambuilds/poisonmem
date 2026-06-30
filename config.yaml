@@ -1,0 +1,34 @@
+openrouter:
+  base_url: https://openrouter.ai/api/v1
+  timeout_seconds: 90
+  app_name: Memory Poisoning Sanity Check
+  app_url: https://localhost/memory-poisoning-sanity
+  response_mode: json_object
+  fetch_generation_stats: true
+
+models:
+  - id: openai/gpt-4o-mini
+    provider: openai
+  - id: meta-llama/llama-4-scout
+    provider: deepinfra
+
+generation:
+  temperature: 0
+  top_p: 1
+  max_tokens: 350
+  repetitions: 3
+  concurrency: 4
+  malformed_retries: 1
+  provider_fallbacks: false
+
+retrieval:
+  final_k: 4
+  candidate_k: 12
+  rrf_constant: 60
+  e5_model: intfloat/e5-base-v2
+  bge_model: BAAI/bge-base-en-v1.5
+
+analysis:
+  bootstrap_samples: 2000
+  bootstrap_seed: 20260627
+

@@ -1,0 +1,14 @@
+.DS_Store
+.env
+.venv/
+.pytest_cache/
+.ruff_cache/
+__pycache__/
+*.py[cod]
+.cache/
+results/*.jsonl
+results/*.json
+results/*.parquet
+results/*.md
+!results/README.md
+
