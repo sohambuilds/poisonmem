@@ -1,5 +1,8 @@
 # Persistent-memory retrieval-poisoning sanity check
 
+For the full research rationale, operating procedure, decision rules, troubleshooting, and
+collaborator checklist, see [GUIDE.md](GUIDE.md).
+
 This repository implements the controlled pilot in the supplied design suite. It tests only the
 path from pre-seeded procedural records, through fixed-budget retrieval, to a later simulated action.
 Every tool name is an enum; the harness never executes a real deployment, payment, publication, or
